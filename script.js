@@ -6,5 +6,5 @@ function createLink() {
   const url = `https://mail.google.com/mail/u/0/?to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}&fs=1&tf=cm`;
 
   document.getElementById('mailLink').href = url;
-  document.getElementById('mailLink').textContent = "このリンクをクリックしてメールを作成";
+  document.getElementById('mailLink').textContent = "リンクを作成できました！この文字をクリックしたらそのURLに行きます。";
 }
