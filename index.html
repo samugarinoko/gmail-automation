@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>文字列操作</title>
+    <title>Gmail-Automation</title>
 </head>
 <body>
-    <a>Email</a><input type="text" id="email"><br>
-    <a>Subject</a><input type="text" id="subject"><br>
-    <a>Message</a><input type="text" id="message"><br>
-    <p id="result"></p>
-    <button onclick="addCharacters()">Let's automate!</button>
-
-    <script src="script.js"></script>
+    <input type="text" id="to" placeholder="宛先">
+<input type="text" id="subject" placeholder="件名">
+<textarea id="body" placeholder="本文"></textarea>
+<button onclick="createLink()">リンクを作成</button>
+<a id="mailLink" href=""></a>
+ <script src="script.js"></script>
 </body>
 </html>
