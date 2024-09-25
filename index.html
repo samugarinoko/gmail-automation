@@ -9,7 +9,37 @@
 <textarea id="body" placeholder="Message"></textarea>
 <button onclick="createLink()">リンクを作成</button>
 <a id="mailLink" href=""></a>
-    <a href="https://github.com/samugarinoko/gmail-automation">program code(GitHub)</a><br>
+    <br><br><a href="https://github.com/samugarinoko/gmail-automation">program code(GitHub)</a>
+    <br><br><button id="copyButton">コピー</button>
+    <script>
+        function copyToClipboard() {
+  // コピーしたいテキストを取得 (ここでは、生成したURLの要素のidを"mailLink"と想定)
+  const textToCopy = document.getElementById('mailLink').href;
+
+  // テキストエリアを一時的に作成し、そこにテキストを設定
+  const tempTextArea = document.createElement("textarea");
+  tempTextArea.value = textToCopy;
+
+  // body要素の子要素として追加
+  document.body.appendChild(tempTextArea);
+
+  // テキストエリアをフォーカスし、選択
+  tempTextArea.select();
+  tempTextArea.setSelectionRange(0, 99999); // 全選択
+
+  // クリップボードにコピー
+  document.execCommand('copy');
+
+  // テキストエリアを削除
+  document.body.removeChild(tempTextArea);
+
+  // コピー完了のメッセージを表示など、任意の処理を追加
+  alert("コピーしました！");
+}
+
+// ボタンにクリックイベントを追加
+document.getElementById('copyButton').addEventListener('click', copyToClipboard);
+    </script>
  <script src="script.js"></script>
     <script>
 function checkUserAgent() {
