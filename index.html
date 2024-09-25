@@ -11,5 +11,15 @@
 <a id="mailLink" href=""></a>
     <a href="https://github.com/samugarinoko/gmail-automation">program code(GitHub)</a>
  <script src="script.js"></script>
-</body>
+    <script>
+function checkUserAgent() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)) {
+        // スマートフォンと判定された場合
+        alert("このページはPCでのみご利用いただけます。");
+    }
+}
+
+checkUserAgent();
+</script></body>
 </html>
